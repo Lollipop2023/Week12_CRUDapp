@@ -1,0 +1,63 @@
+<!--I really wanted to make a very simple little app for my elderly father to use. He has
+to take his blood pressure and blood sugars multiple times a day, and about once a month he
+takes these numbers to his doctors. Often he just puts them in a little notebook, but if he 
+forgets it in another room or something he just jots it down and often forgets to transfer it.
+The one thing he never leaves...his phone. So if they are recorded there, I think the doctors
+would get a much more accurate idea of his day to day! So, I created a three input entry form
+followed by a table to display those entries. HTML is my kinda language, simple and straight forward.-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Daily Health Tracker</title>
+  <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+  <style>
+  
+    body {
+      padding-top: 50px;
+      Width: 350px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1 class="text-center">Health Tracker</h1>
+    <form id="healthForm">
+      <div class="form-group">
+          <label for="date">Date:</label>
+          <input type="date" class="form-control" id="date" required>
+      </div>
+      <div class="form-group">
+        <label for="bloodPressure">Blood Pressure:</label>
+        <input type="text" class="form-control" id="bloodPressure">
+      </div>
+      <div class="form-group">
+        <label for="glucose">Glucose:</label>
+        <input type="number" class="form-control" id="glucose">
+      </div><br>
+      <button type="submit" class="btn btn-success">Add</button>
+    </form>
+    <hr>
+    <h2>Recorded Readings</h2>
+    <table class="table">
+      <thead>
+        <tr>
+          <th>Date</th>
+          <th>Blood Pressure</th>
+          <th>Glucose</th>
+          
+        </tr>
+      </thead>
+      <tbody id="entryTableBody">
+        
+      </tbody>
+    </table>
+  </div>
+  <script src = "script.js"></script>
+  <link src = "node_modules/bootstrap/dist/js/bootstrap.js">
+  <link src = "node_modules/jquery/dist">
+
+</body>
+</html>  
